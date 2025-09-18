@@ -130,7 +130,8 @@ export const SearchFilters = ({
                   variant="outline"
                   className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200"
                 >
-                  <MapPin className="h-4 w-4" />
+                  <MapPin className="h-4 w-4 mr-2" />
+                  Locations
                 </Button>
               </LocationsModal>
               
@@ -149,19 +150,20 @@ export const SearchFilters = ({
                   variant="outline"
                   className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200"
                 >
-                  <Filter className="h-4 w-4" />
+                  <Filter className="h-4 w-4 mr-2" />
+                  Filters
                 </Button>
               </FiltersModal>
             </div>
           </div>
           
           {/* Centered delivery and filter buttons */}
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-1">
             <Button 
               type="button" 
               variant="outline" 
               size="sm"
-              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs md:text-sm ${
+              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-8 ${
                 selectedDelivery.includes("Cash on Delivery") 
                   ? "text-green-700 border-green-500 bg-green-50" 
                   : "hover:text-green-700 hover:border-green-500 hover:bg-green-50"
@@ -174,16 +176,14 @@ export const SearchFilters = ({
                 onDeliveryFilter?.(newSelection.join(","));
               }}
             >
-              <Truck className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
-              <span className="hidden sm:inline">Cash on Delivery</span>
-              <span className="sm:hidden">COD</span>
+              Cash on Delivery
             </Button>
             
             <Button 
               type="button" 
               variant="outline" 
               size="sm"
-              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs md:text-sm ${
+              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-8 ${
                 selectedDelivery.includes("Pickup In-Store") 
                   ? "text-blue-700 border-blue-500 bg-blue-50" 
                   : "hover:text-blue-700 hover:border-blue-500 hover:bg-blue-50"
@@ -196,16 +196,15 @@ export const SearchFilters = ({
                 onDeliveryFilter?.(newSelection.join(","));
               }}
             >
-              <Store className="h-3 w-3 md:h-4 md:w-4 mr-1 md:mr-2" />
-              <span className="hidden sm:inline">Store Pick Up</span>
-              <span className="sm:hidden">Pickup</span>
+              <Store className="h-3 w-3 mr-1" />
+              Store Pickup
             </Button>
             
             <Button 
               type="button" 
               variant="outline" 
               size="sm"
-              className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200 text-xs md:text-sm"
+              className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200 text-xs px-2 py-1 h-8"
               onClick={() => {
                 setSearch("");
                 setSelectedDelivery([]);
@@ -217,8 +216,7 @@ export const SearchFilters = ({
                 setResetVersion((v) => v + 1);
               }}
             >
-              <span className="hidden sm:inline">Clear Filters</span>
-              <span className="sm:hidden">Clear</span>
+              Clear
             </Button>
           </div>
         </div>
