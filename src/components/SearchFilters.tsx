@@ -163,7 +163,7 @@ export const SearchFilters = ({
               type="button" 
               variant="outline" 
               size="sm"
-              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-8 ${
+              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-6 ${
                 selectedDelivery.includes("Cash on Delivery") 
                   ? "text-green-700 border-green-500 bg-green-50" 
                   : "hover:text-green-700 hover:border-green-500 hover:bg-green-50"
@@ -183,7 +183,7 @@ export const SearchFilters = ({
               type="button" 
               variant="outline" 
               size="sm"
-              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-8 ${
+              className={`border-2 shadow-md hover:shadow-lg transition-all duration-200 text-xs px-2 py-1 h-6 ${
                 selectedDelivery.includes("Pickup In-Store") 
                   ? "text-blue-700 border-blue-500 bg-blue-50" 
                   : "hover:text-blue-700 hover:border-blue-500 hover:bg-blue-50"
@@ -196,7 +196,6 @@ export const SearchFilters = ({
                 onDeliveryFilter?.(newSelection.join(","));
               }}
             >
-              <Store className="h-3 w-3 mr-1" />
               Store Pickup
             </Button>
             
@@ -204,7 +203,7 @@ export const SearchFilters = ({
               type="button" 
               variant="outline" 
               size="sm"
-              className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200 text-xs px-2 py-1 h-8"
+              className="border-2 shadow-md hover:shadow-lg transition-shadow duration-200 text-xs px-2 py-1 h-6"
               onClick={() => {
                 setSearch("");
                 setSelectedDelivery([]);
